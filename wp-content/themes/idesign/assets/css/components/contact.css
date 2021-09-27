@@ -1,0 +1,114 @@
+#contact {
+    position: relative;
+    z-index: 0;
+}
+
+#contact .container{
+    display: flex;
+    width: 100%;
+}
+
+#contact::after {
+    content: "";
+    z-index: -1;
+    background-color: var(--primary-color);
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.contact__info {
+    width: 50%;
+}
+
+.contact__info p {
+    margin: 20px 0;
+}
+
+.contact__info ul li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+.wpcf7 {
+    width: 50%;
+}
+#contact form {
+    width: 100%;
+}
+
+.contact__form {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--pure-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.form-control {
+    width: 100% !important;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--gray-color);
+}
+
+.contact__btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 980px) {
+    
+.wpcf7 {
+    width: 100%;
+}
+    #contact .container {
+        flex-direction: column;
+    }
+
+    .contact__info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+
+    .contact__desc {
+        width: 60%;
+        padding-right: 20px;
+    }
+
+    .contact__form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .wpcf7 {
+        width: 100%;
+    }
+    #contact::after {
+        display: none;
+    }
+    .contact__info {
+        display: block;
+    }
+    .contact__desc {
+        width: 100%;
+    }
+
+    .contact__form {
+        background-color: none;
+        box-shadow: none;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+}

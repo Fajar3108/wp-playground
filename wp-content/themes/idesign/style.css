@@ -1,0 +1,163 @@
+/*
+Theme Name: IDesign
+Theme URI:
+Author: MaFI
+Author URI: https://instagram.com/mafi.3108
+Description: Design Agency
+Tested up to: 5.7
+Requires PHP: 5.6
+Version: 1.3
+Template: twentytwentyone
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: idesign
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+IDesign WordPress Theme, (C) 2020 WordPress.org
+IDesign is distributed under the terms of the GNU GPL.
+*/
+
+/* Style Components */
+@import url('./assets/css/components/about.css');
+@import url('./assets/css/components/hero.css');
+@import url('./assets/css/components/navbar.css');
+@import url('./assets/css/components/team.css');
+@import url('./assets/css/components/contact.css');
+@import url('./assets/css/components/footer.css');
+
+:root {
+    /* Colors */
+    --primary-color: #7868E6;
+    --body-color: #303030;
+    --pure-color: #FFFFFF;
+    --gray-color: #AAAAAA;
+    --light-color: #EEEEEE;
+    --dark-color: #666666;
+
+    /* Font Size */
+    --banner-text: 72px;
+    --title-text: 24px;
+    --paragraph-title: 18px;
+    --body-text: 16px;
+}
+
+html {
+    margin-top: 0 !important;
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--body-color);
+}
+
+body {
+    background-color: var(--pure-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 120px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1.display-text {
+    font-size: var(--banner-text);
+    line-height: var(--banner-text);
+}
+
+
+section {
+    padding-top: 100px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+}
+
+.section-title h2 {
+    font-size: var(--paragraph-title);
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.section-title::before {
+    content: "";
+    margin-right: 20px;
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.btn {
+    padding: 12px 32px;
+    color: var(--pure-color);
+    display: inline-block;
+    font-size: var(--paragraph-title);
+    transition: background-color .5s;
+}
+
+.btn:hover {
+    background-color: #462ee0;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.text-body {
+    font-size: var(--body-text);
+    color: var(--body-color);
+    line-height: 28px;
+}
+
+.title-text {
+    font-size: 24px;
+}
+
+.paragraph-title {
+    font-size: var(--paragraph-title);
+}
+
+@media screen and (max-width: 980px) {
+    :root {
+        --banner-text: 42px;
+        --title-text: 18px;
+        --paragraph-title: 16px;
+        --body-text: 14px;
+    }
+
+    .container {
+        padding: 0 80px;
+    }
+
+    section { 
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    :root {
+        --banner-text: 32px;
+        --title-text: 18px;
+        --paragraph-title: 16px;
+        --body-text: 14px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    section { 
+        padding-top: 75px;
+    }
+}

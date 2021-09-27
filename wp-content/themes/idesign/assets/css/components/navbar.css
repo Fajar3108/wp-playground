@@ -1,0 +1,104 @@
+header {
+    width: 100%;
+    height: 100px;
+}
+
+header .container {
+    height: 100%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+.nav-toggle span {
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.nav-toggle span:last-child {
+    margin-top: 10px;
+    width: 30px;
+}
+
+.nav-toggle.active {
+    z-index: 999;
+    position: fixed;
+    right: 20px;
+    animation: toggle-open 2s;
+}
+
+@keyframes toggle-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-toggle.active span {
+    background-color: #f00;
+}
+.nav-toggle.active span:first-child {
+    transform: rotate(45deg);
+}
+.nav-toggle.active span:last-child {
+    width: 50px;
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--pure-color);
+    box-shadow: -5px 0 30px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    z-index: 99;
+}
+
+.nav-menu.active {
+    animation: nav-open .5s ;
+    display: flex;
+}
+
+@keyframes nav-open {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.nav-menu li {
+    padding: 20px 0;
+    list-style: none;
+}
+
+.nav-menu .current-menu-item a{
+    color: var(--primary-color);
+}
